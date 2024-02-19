@@ -1,0 +1,237 @@
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-icons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-react-filemanager/styles/material.css";
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: Ubuntu;
+    box-sizing: border-box;
+}
+.top-banner
+{
+    padding: 30px 40px;
+    width: 100%;
+    background: #e3edf6;
+}
+.top-banner .container2
+{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.top-banner .container2 .detail
+{
+    margin-top: 8%;
+    margin-left: 30px;
+}
+.top-banner .container2 .detail h2
+{
+    font-size: 42px;
+    color: #010f1c;
+    margin-right: 50%;
+    margin-bottom: 40px;
+}
+.top-banner .container2 .detail .link
+{
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: 010f1c;
+    background: #fff;
+    transition: 0.5s;
+}
+.top-banner .container2 .detail .link:hover
+{
+    background: #0989ff;
+    color: #fff;
+}
+.product_type
+{
+    padding: 20px 30px;
+    width: 100%;
+}
+.product_type .container2
+{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.product_type .container2 .box .img_box
+{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background: #e8f2ff;
+    overflow: hidden;
+    cursor: pointer;
+}
+.product_type .container2 .box .img_box img{
+    height: 100px;
+    width: 100px;
+    align-items: center;
+    max-width: 100%;
+    justify-content: center;
+    margin-top: 35px;
+    margin-left: 45px;
+    transition: 0.5s;
+
+}
+.product_type .container2 .box .img_box:hover img
+{
+    transform: scale(1.7);
+}
+.product_type .container2 .box .detail 
+{
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+}
+.product_type .container2 .box .detail p
+{
+    margin-top: 10px;
+    color: #9a9a9a;
+}
+.about
+{
+    padding: 40px 50px;
+    width: 100%;
+}
+.about .container2
+{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.about .container2 .box
+{
+    padding: 20px 30px;
+    display: flex;
+    background: #ecf2f7;
+    width: 300px;
+    height: 90px;
+    border-radius: 10px;
+    cursor:pointer;
+}
+.about .container2 .box .icon
+{
+    color: #e44c8c;
+    font-size: 32px;
+    margin-top: 10px;
+}
+.about .container2 .box .icon .detail
+{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.about .container2 .box .icon .detail h3
+{
+    color: #010f1c;
+}
+.about .container2 .box .icon .detail p
+{
+    color: #9a9a9a;
+    font-size: 5px;
+}
+.piechart
+{
+height: 300px;
+width: 500px;
+}
+.button1 {
+    margin: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .button1:hover {
+    background-color: #0056b3;
+    color: #fff;
+  }
+  .loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin: 10px auto;
+  }
+  /* styles.css */
+
+.container1 {
+    max-width: 800px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the container2 horizontally */
+    padding: 20px;
+}
+
+.responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto; /* Enable horizontal scrolling for small screens */
+}
+.category {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .stat {
+    margin-left: 20px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .ubuntu{
+    font-family: Ubuntu;
+  }
+  .showing
+  {
+    background-image: url('../public/img/network_monitoring.png');
+  }
+  .showing1
+  {
+    background-image: url('../public/img/file_managing.png');
+  }
+  .showing2
+  {
+  background-image: url('../public/img/os_compatibility.png');
+  }
+  *
+  {
+    font-family: Ubuntu !important;
+  }
+  .navimage
+  {
+    background: url('../public/img/blackhole.webp'), no-repeat, center;
+    background-size: cover;
+
+  }
+  .navheight
+  {
+    height: auto;
+  }
+  .showing5
+  {
+    color: black;
+  }
+  
+  
+  

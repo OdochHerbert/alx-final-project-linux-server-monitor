@@ -1,0 +1,21 @@
+#!/bin/bash
+
+interface="wlp1s0"  # Change this to your specific network interface
+duration_seconds=10  # Adjust the duration in seconds as needed
+
+# Start tcpdump in the background and redirect output to a temporary file
+tcpdump -l -e -n -i $interface > output.txt &
+tcpdump_pid=$!
+
+# Wait for the specified duration
+sleep $duration_seconds
+
+# Terminate tcpdump process
+kill $tcpdump_pid
+
+# Process the output file to extract MAC addresses and bytes in/out
+awk '/([0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2}/ {print $2, $NF}' output.txt | sort | uniq
+
+# Remove the temporary file
+rm output.txt
+
