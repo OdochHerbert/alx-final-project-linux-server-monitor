@@ -9,6 +9,7 @@ import NetworkStatistics from './net_stat'
 import ContactForm from './contact'
 import AboutPage from './about'
 import FileManager1 from './file'
+import Wifi_info from './wifi_info'
 const Rout = () => {
     return (
         <>
@@ -22,6 +23,7 @@ const Rout = () => {
         <Route path='/contact' element = {<ContactForm/>}/>
         <Route path='/about' element = {<AboutPage/>}/>
         <Route path='/file' element = {<FileManager1/>}/>
+        <Route path='/wifi_info' element = {<Wifi_info/>}/>
 
         </Routes>
        

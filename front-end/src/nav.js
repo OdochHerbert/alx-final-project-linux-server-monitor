@@ -9,6 +9,14 @@ import {DiLinux} from 'react-icons/di'
 import{SiSpeedtest} from 'react-icons/si'
 import { useAuth0 } from "@auth0/auth0-react";
 import './nav.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle } from '@coreui/react';
+import MyDropdown from './dropdown'
+
+
+
+
+
 const Nav = () => {
   const { loginWithRedirect, logout, user, isAuthenticated} = useAuth0();
   return(
@@ -75,7 +83,7 @@ const Nav = () => {
             (
               <div className='account'>
               <div className='user_icon'>
-                <AiOutlineUser/>
+             
               </div>
               <div className='header'>
       <div className='container'>
@@ -102,13 +110,20 @@ const Nav = () => {
           <li className='list-inline-item'>
             <Link to='/file'className='link'>Files</Link>
           </li>
+          <li className='list-inline-item'>
+            <Link to='/wifi_info'className='link'>Wifi</Link>
+          </li>
+          
+          
         </ul>
         
         
         </div>
         
       </div>
+      <MyDropdown></MyDropdown>
     </div>
+    
             </div>
             )
           }

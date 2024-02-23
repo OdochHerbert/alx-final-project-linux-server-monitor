@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle } from '@coreui/react';
 
-const MyComponent = () => {
+const MyDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -22,4 +22,4 @@ const MyComponent = () => {
   );
 };
 
-export default MyComponent;
+export default MyDropdown;
