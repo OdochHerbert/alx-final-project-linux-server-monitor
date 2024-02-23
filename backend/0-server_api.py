@@ -131,6 +131,7 @@ def get_network_data():
     except Exception as e:
         return jsonify({"error": str(e)})
 
+#Endpoint for speedtest
 @app.route('/speed_test', methods=['GET'])
 def speed_test():
     try:
@@ -141,6 +142,18 @@ def speed_test():
 
         output = f"Download: {download_speed:.2f} Mbps\nUpload: {upload_speed:.2f} Mbps"
         return jsonify({'output': output})
+
+    except Exception as e:
+        return jsonify({'error': str(e)})
+        
+#Endpoint for Wifi information
+@app.route('/wifi_info', methods=['GET'])
+def wifi_info():
+    try:
+        command = "python password.py"
+        wifi_information = run_command(command)
+
+        return jsonify({'wifi_information': wifi_information})
 
     except Exception as e:
         return jsonify({'error': str(e)})
