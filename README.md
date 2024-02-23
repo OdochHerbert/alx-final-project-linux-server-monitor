@@ -24,6 +24,8 @@ https://www.geeksforgeeks.org/how-to-install-python-on-linux/
 
 https://docs.gunicorn.org/en/stable/install.html 
 
+running server: 
+
 # Permissions of commands.
 
 In the sudoers file( accessed by [sudo visudo] in the terminal)
@@ -34,4 +36,11 @@ Allow members of group sudo to execute any command
 
 # MONGODB
 
+https://www.geeksforgeeks.org/how-to-install-and-configure-mongodb-in-ubuntu/ 
+
 # NGINX SERVER
+
+default file: /backend/nginx_server_file
+
+file server file
+
