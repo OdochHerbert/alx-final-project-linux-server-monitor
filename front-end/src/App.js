@@ -5,7 +5,9 @@ import Contact from './contact'
 import Footer from './footer'
 import {BrowserRouter} from 'react-router-dom'
 import Feedback from './feedback'
+import { useAuth0 } from "@auth0/auth0-react";
 const App = () => {
+  const { loginWithRedirect, logout, user, isAuthenticated} = useAuth0()
   return(
     <>
     <BrowserRouter>
@@ -13,7 +15,19 @@ const App = () => {
     <Nav/>
     <Rout/>
     <Feedback/>
-    <Contact/>
+    {
+            isAuthenticated ?
+          
+          <Contact/>
+          
+          
+          :
+           <h5></h5>
+
+
+
+          }
+          
     <Footer/>
     </BrowserRouter>
     </>

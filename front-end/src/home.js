@@ -65,31 +65,6 @@ const Home = () =>{
             </div>
         </div>
     </section>
-    <section className="text-center bg-light testimonials">
-        <div className="container">
-            <h2 className="mb-5">What people are saying...</h2>
-            <div className="row">
-                <div className="col-lg-4">
-                    <div className="mx-auto testimonial-item mb-5 mb-lg-0"><img className="rounded-circle img-fluid mb-3" src="img/florence_pugh.webp"/>
-                        <h5>Florence Pugh.</h5>
-                        <p className="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
-                    </div>
-                </div>
-                <div className="col-lg-4">
-                    <div className="mx-auto testimonial-item mb-5 mb-lg-0"><img className="rounded-circle img-fluid mb-3" src="img/peaky.png"/>
-                        <h5>Cillian Murphy.</h5>
-                        <p className="font-weight-light mb-0">"Just like the Peaky ******* Blinders, I sudo my way through the network like it is Birmingham City "</p>
-                    </div>
-                </div>
-                <div className="col-lg-4">
-                    <div className="mx-auto testimonial-item mb-5 mb-lg-0"><img className="rounded-circle img-fluid mb-3" src="img/oppenheimer.jpg"/>
-                        <h5>J Robert Oppenheimer.</h5>
-                        <p className="font-weight-light mb-0">"How do stars die! Hmmm, Ok, a star cools down and expands, this leads to increase in density which leads to increase in gravity, gravity becomes so massive that even light cant escape it. GUESS WHAT IT HAS BECOME"</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
         </div>
        

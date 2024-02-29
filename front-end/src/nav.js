@@ -86,42 +86,43 @@ const Nav = () => {
              
               </div>
               <div className='header'>
-      <div className='container'>
-        <div className='col-lg-6 text-center text-lg-start my-auto h-100 nav'>
-        <ul className='list-inline mb-2'>
-          <li className='list-inline-item'>
-            <Link to='/'className='link'>Home</Link>
-          </li>
-          <li>
-          <Link to='/live_usage' className='link'>Utilization</Link>
-          </li>
-          <li className='list-inline-item'>
-            <Link to='/linked_devices'className='link'>LAN</Link>
-          </li>
-          <li className='list-inline-item'>
-            <Link to='/net_interfaces'className='link'>NetRout</Link>
-          </li>
-          <li className='list-inline-item'>
-            <Link to='/speed_test'className='link'>Speed Test <SiSpeedtest/> </Link>
-          </li>
-          <li className='list-inline-item'>
-            <Link to='/net_statistics'className='link'>NetStat</Link>
-          </li>
-          <li className='list-inline-item'>
-            <Link to='/file'className='link'>Files</Link>
-          </li>
-          <li className='list-inline-item'>
-            <Link to='/wifi_info'className='link'>Wifi</Link>
-          </li>
-          
-          
-        </ul>
         
-        
-        </div>
-        
-      </div>
-      <MyDropdown></MyDropdown>
+
+      <CDropdown className='dropdown' >
+      <CDropdownToggle color="primary">
+        Home
+      </CDropdownToggle>
+      <CDropdownMenu>
+      <CDropdownItem><Link to='/' className='link'>Home</Link></CDropdownItem>
+      <CDropdownItem><Link to='/about'className='link'>About</Link></CDropdownItem>
+      </CDropdownMenu>
+    </CDropdown>
+
+      <CDropdown className='dropdown' >
+      <CDropdownToggle color="primary">
+        Network
+      </CDropdownToggle>
+      <CDropdownMenu>
+      <CDropdownItem><Link to='/live_usage' className='link'>Live Usage</Link></CDropdownItem>
+      <CDropdownItem><Link to='/linked_devices'className='link'>Neighbors</Link></CDropdownItem>
+        <CDropdownItem><Link to='/net_interfaces'className='link'>NetRout</Link></CDropdownItem>
+        <CDropdownItem> <Link to='/speed_test'className='link'>Speed Test </Link></CDropdownItem>
+        <CDropdownItem><Link to='/net_statistics'className='link'>NetStat</Link></CDropdownItem>
+        <CDropdownItem> <Link to='/wifi_info'className='link'>Wifi</Link> </CDropdownItem>
+      </CDropdownMenu>
+    </CDropdown>
+
+    <CDropdown className='dropdown'>
+      <CDropdownToggle color="primary">
+        File Management
+      </CDropdownToggle>
+      <CDropdownMenu>
+        <CDropdownItem><Link to='/file'className='link'>File Server</Link></CDropdownItem>
+        <CDropdownItem> <Link to='/crud'className='link'>CRUD </Link></CDropdownItem>
+        <CDropdownItem><Link to='/video_player'className='link'>Video player</Link></CDropdownItem>
+        <CDropdownItem> <Link to='/music_player'className='link'>Music Player</Link> </CDropdownItem>
+      </CDropdownMenu>
+    </CDropdown>
     </div>
     
             </div>
@@ -140,9 +141,6 @@ const Nav = () => {
           </li>
           <li className='list-inline-item'>
             <Link to='/about'className='link'>About</Link>
-          </li>
-          <li className="list-inline-item">
-            <Link to='/contact'className='link'>Contact</Link>
           </li>
         </ul>
               </div>

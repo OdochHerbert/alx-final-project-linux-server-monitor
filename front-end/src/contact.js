@@ -6,8 +6,7 @@ const ContactForm = () => {
   const { user, isAuthenticated } = useAuth0(); // Retrieve user information from Auth0
 
   const [message, setMessage] = useState('');
-  const [responseMessage, setResponseMessage] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+  const [flashMessage, setFlashMessage] = useState(null); // State for flash message
 
   const handleChange = (e) => {
     setMessage(e.target.value);
@@ -30,19 +29,19 @@ const ContactForm = () => {
       });
       
       if (response.status === 200) {
-        setResponseMessage('Form submitted successfully!');
+        setFlashMessage('Comment submitted successfully!');
         setMessage('');
         setTimeout(() => {
-          setResponseMessage('');
+          setFlashMessage(null);
         }, 5000);
       } else {
-        throw new Error('Failed to submit form');
+        throw new Error('Failed to submit comment');
       }
     } catch (error) {
       console.error('Error:', error);
-      setErrorMessage('Failed to submit form. Please try again later.');
+      setFlashMessage('Failed to submit comment. Please try again later.');
       setTimeout(() => {
-        setErrorMessage('');
+        setFlashMessage(null);
       }, 5000);
     }
   };
@@ -55,6 +54,8 @@ const ContactForm = () => {
             <h2 className="mb-4">Have something on your mind? Tell us</h2>
           </div>
           <div className="col-md-10 col-lg-8 col-xl-7 mx-auto position-relative">
+            {/* Display flash message if present */}
+            {flashMessage && <div className="alert alert-success">{flashMessage}</div>}
             <form onSubmit={handleSubmit}>
               <div className="row">
                 <div className="col-12 col-md-9 mb-2 mb-md-0">
