@@ -19,7 +19,7 @@ def monitor_bandwidth(duration_seconds):
     try:
         # Create a capture object to capture network traffic on a specific interface
         # Filter to capture traffic only within your local subnet (e.g., 192.168.1.x)
-        capture = pyshark.LiveCapture(interface='wlp1s0', display_filter=f'ip.addr==192.168.100.0/24')
+        capture = pyshark.LiveCapture(interface='wlp1s0', display_filter=f'ip.addr==192.168.1.0/24')
 
         # Dictionary to store byte counts and other information for each MAC address
         mac_info = {}
